@@ -1,5 +1,7 @@
 # moreentryproject
 
+## 多个项目入口，单个项目代码打包
+```
 ## Project setup
 ```
 yarn install
