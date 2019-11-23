@@ -19,7 +19,7 @@ let objectProject = {
         filename: 'index.html',
         // 当使用 title 选项时，
         // template 中的 title 标签需要是 <title><%= htmlWebpackPlugin.options.title %></title>
-        // title: 'jns',
+        // title: 'default',
         // 在这个页面中包含的块，默认情况下会包含
         // 提取出来的通用 chunk 和 vendor chunk。
         chunks: ['chunk-vendors', 'chunk-common', 'index']
@@ -32,7 +32,7 @@ let objectProject = {
         filename: 'page2.html',
         // 当使用 title 选项时，
         // template 中的 title 标签需要是 <title><%= htmlWebpackPlugin.options.title %></title>
-        // title: 'jns',
+        // title: 'default',
         // 在这个页面中包含的块，默认情况下会包含
         // 提取出来的通用 chunk 和 vendor chunk。
         chunks: ['chunk-vendors', 'chunk-common', 'page2']
@@ -72,6 +72,7 @@ module.exports = {
         stats: 'errors-only',
     },
     lintOnSave: false,
+    productionSourceMap: false,
     css: {
         // 是否使用css分离插件 ExtractTextPlugin Default: 生产环境下是 true，开发环境下是 false
         // extract: true,
