@@ -1,6 +1,7 @@
 <template>
     <div class="page-index">
-        <h2>我是page2页</h2>
+        <h2 :class="$style.blue">我是page2页</h2>
+        <van-button type="warning">page2页的确定</van-button>
     </div>
 </template>
 <script>
@@ -13,10 +14,18 @@ export default {
     methods: {}
 };
 </script>
+<style module>
+.blue {
+    color: #00f !important;
+}
+</style>
 <style lang="less" scoped>
 .page-index {
-    color: #f00;
-    font-size: 26px;
     text-align: center;
+    h2 {
+        padding: 20px;
+        color: #f00;
+        font-size: 18px;
+    }
 }
 </style>
