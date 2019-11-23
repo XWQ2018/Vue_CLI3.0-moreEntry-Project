@@ -41,7 +41,7 @@ if (!isPro) {
 
 // 使用vue存储插件
 Vue.use(vueWebStorage, {
-    prefix: 'jnsApp', // default `app_`
+    // prefix: 'jnsApp', // default `app_`
     drivers: ['session', 'local'], // 生成Vue.$localStorage以及Vue.$sessionStorage
 });
 Vue.prototype.$local = Vue.$localStorage; // 原型链加方法

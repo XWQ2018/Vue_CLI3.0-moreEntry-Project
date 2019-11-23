@@ -1,6 +1,7 @@
 <template>
     <div class="page-index">
         <h2>我是index页</h2>
+        <van-button type="primary">确定</van-button>
     </div>
 </template>
 <script>
@@ -15,8 +16,11 @@ export default {
 </script>
 <style lang="less" scoped>
 .page-index {
-    color: #f00;
-    font-size: 26px;
     text-align: center;
+    h2 {
+        color: #f00;
+        font-size: 18px;
+        padding: 20px;
+    }
 }
 </style>
