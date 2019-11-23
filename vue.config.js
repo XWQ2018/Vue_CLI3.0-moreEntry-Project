@@ -14,7 +14,7 @@ let objectProject = {
         // page 的入口
         entry: 'src/views/index/main.js',
         // 模板来源
-        template: 'public/index.html',
+        template: 'src/public/index.html',
         // 在 dist/index.html 的输出
         filename: 'index.html',
         // 当使用 title 选项时，
@@ -28,7 +28,7 @@ let objectProject = {
         // page 的入口
         entry: 'src/views/page2/main.js',
         // 模板来源
-        template: 'public/page2.html',
+        template: 'src/public/page2.html',
         filename: 'page2.html',
         // 当使用 title 选项时，
         // template 中的 title 标签需要是 <title><%= htmlWebpackPlugin.options.title %></title>
