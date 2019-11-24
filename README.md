@@ -31,6 +31,18 @@ yarn run lint
 ```
 yarn run test:e2e
 ```
+### index页打包命令
+```
+yarn run build_index
+```
+### page2页打包命令
+```
+yarn run build_page2
+```
+### 综合打包
+```
+yarn run build_allProject
+```
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
