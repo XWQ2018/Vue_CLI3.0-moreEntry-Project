@@ -4,7 +4,6 @@
     "private": true,
     "scripts": {
         "serve": "vue-cli-service serve",
-        "build": "vue-cli-service build",
         "build_index": "vue-cli-service build index",
         "build_page2": "vue-cli-service build page2",
         "build_allProject": "vue-cli-service build all",
