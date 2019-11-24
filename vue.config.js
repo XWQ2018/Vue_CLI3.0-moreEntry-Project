@@ -12,7 +12,7 @@ const isProd = processEnv === 'production';
 let objectProject = {
     index: {
         // page 的入口
-        entry: 'src/views/index/main.js',
+        entry: 'src/page/index/main.js',
         // 模板来源
         template: 'src/public/index.html',
         // 在 dist/index.html 的输出
@@ -26,7 +26,7 @@ let objectProject = {
     },
     page2: {
         // page 的入口
-        entry: 'src/views/page2/main.js',
+        entry: 'src/page/page2/main.js',
         // 模板来源
         template: 'src/public/page2.html',
         filename: 'page2.html',
