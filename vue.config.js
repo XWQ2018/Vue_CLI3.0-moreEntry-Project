@@ -25,27 +25,21 @@ let objectProject = {
         chunks: ['chunk-vendors', 'chunk-common', 'index']
     },
     page2: {
-        // page 的入口
         entry: 'src/page/page2/main.js',
-        // 模板来源
         template: 'src/public/page2.html',
         filename: 'page2.html',
-        // 当使用 title 选项时，
-        // template 中的 title 标签需要是 <title><%= htmlWebpackPlugin.options.title %></title>
-        // title: 'default',
-        // 在这个页面中包含的块，默认情况下会包含
-        // 提取出来的通用 chunk 和 vendor chunk。
         chunks: ['chunk-vendors', 'chunk-common', 'page2']
     },
 };
 //分入口打包
 let pages = {};
 let projectName = process.argv[3];
-if (isProd && projectName == 'all') {
+let projectArr = ['index', 'page2'];
+if ((isProd && projectName == 'all') || !isProd) {
     pages = objectProject;
-} else if (isProd && projectName != 'all') {
+} else if (isProd && projectArr.includes[projectName]) {
     pages[projectName] = objectProject[projectName];
-} else if (!isProd) {
+} else {
     pages = objectProject;
 }
 
