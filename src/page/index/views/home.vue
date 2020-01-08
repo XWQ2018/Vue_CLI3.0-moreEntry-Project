@@ -11,24 +11,46 @@
             <h2>我是index页</h2>
             <van-button type="primary">确定</van-button>
         </div>
+        <van-uploader :after-read="afterRead" :max-count="num" />
+        <div class="pic-show">
+            <img v-for="(item,key) in list" :key="key" :src="item" />
+        </div>
     </div>
 </template>
 <script>
 import headerOne from "@/components/headOne";
 import intervalTimeSelect from "@/components/calendar/intervalTimeSelect";
+import { Uploader } from "vant";
 export default {
     components: {
         headerOne,
-        intervalTimeSelect
+        intervalTimeSelect,
+        [Uploader.name]: Uploader
     },
     data() {
         return {
-            popShow: false
+            popShow: false,
+            list: [],
+            num: 2
         };
     },
     created() {},
     mounted() {},
     methods: {
+        afterRead(file) {
+            // 此时可以自行将文件上传至服务器
+            console.log(file);
+            let that = this;
+            // let file = document.getElementById("logimg").files[0];
+            let uploadFile = file["file"];
+            console.log(uploadFile);
+            // console.log("file==", uploadFile);
+            let baseUrl = window[window.webkitURL ? "webkitURL" : "URL"][
+                "createObjectURL"
+            ](uploadFile);
+
+            this.list.push(baseUrl);
+        },
         /**
          * @Description: 时间筛选
          * @Param:
@@ -69,6 +91,17 @@ export default {
             color: #f00;
             font-size: 18px;
             padding: 20px;
+        }
+    }
+    .pic-show {
+        width: 60px;
+        height: 60px;
+        margin-top: 60px;
+        border: 1px solid #ccc;
+        img {
+            display: inline-block;
+            width: 60px;
+            height: 60px;
         }
     }
 }
