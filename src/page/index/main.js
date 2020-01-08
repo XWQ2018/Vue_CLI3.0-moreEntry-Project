@@ -33,6 +33,7 @@ Vue.use(flexible).use(Toast).use(Cell).use(CellGroup).use(Button).use(Popup).use
     defaultRouteUrl: '/'
 });
 if (!isPro) {
+    console.log(9999)
     const vConsole = new Vconsole();
     Vue.use(vConsole);
 }

@@ -15,6 +15,7 @@
         <div class="pic-show">
             <img v-for="(item,key) in list" :key="key" :src="item" />
         </div>
+        <van-uploader v-model="fileList" :max-count="num" :after-read="afterRead" />
     </div>
 </template>
 <script>
@@ -31,13 +32,21 @@ export default {
         return {
             popShow: false,
             list: [],
-            num: 2
+            num: 3,
+            fileList: [
+                { url: "https://img.yzcdn.cn/vant/leaf.jpg" },
+                // Uploader 根据文件后缀来判断是否为图片文件
+                // 如果图片 URL 中不包含类型信息，可以添加 isImage 标记来声明
+                { url: "https://cloud-image", isImage: true }
+            ]
         };
     },
     created() {},
     mounted() {},
     methods: {
         afterRead(file) {
+            // console.log(this.fileList);
+            // return;
             // 此时可以自行将文件上传至服务器
             console.log(file);
             let that = this;
